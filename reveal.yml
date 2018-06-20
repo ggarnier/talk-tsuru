@@ -1,0 +1,24 @@
+---
+order: manual
+slides:
+- cover
+- me
+- slide1
+- slide2
+- premissas
+- v1
+- docker
+- container
+- v2
+- arquitetura1
+- arquitetura2
+- arquitetura3
+- orquestrador
+- healing
+- metricas
+- autoscale
+- mais
+- handson
+- futuro
+- links
+- end
