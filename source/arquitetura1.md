@@ -1,11 +1,5 @@
-# Arquitetura
+- **app**: aplicação que será executada em units
+- **unit**: unidade de processamento que executa o código de uma app
+- **nó**: máquina rodando Docker, responsável por executar units
 
-## Conceitos
-
-- **nós**: máquinas rodando Docker, responsáveis por executar as units (containers) das aplicações
-- **pools**: conjuntos de nós, isolam recursos por grupo/área/projeto
-
-  pool1  | pool2
-[] [] [] |
-         | [] []
- [] []   |
+<img src="static/units-nodes.png" />

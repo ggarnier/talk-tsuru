@@ -1,4 +1,5 @@
-# Cenário Globo.com até 2011
+# Globo.com
+# até 2011
 
 - 800+ apps
 - apps rodando em VMs

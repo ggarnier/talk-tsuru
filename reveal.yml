@@ -3,16 +3,18 @@ order: manual
 slides:
 - cover
 - me
-- slide1
-- slide2
+- cenario2011
+- cenario2012
 - premissas
 - v1
 - docker
 - container
 - v2
+- arquitetura
 - arquitetura1
 - arquitetura2
 - arquitetura3
+- arquitetura4
 - orquestrador
 - healing
 - metricas

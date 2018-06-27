@@ -1,1 +1,3 @@
-diferença entre container e VM???
+# Container vs VM
+
+<img src="static/container-vs-vm.png" />
