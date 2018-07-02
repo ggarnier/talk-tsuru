@@ -1,0 +1,2 @@
+# Healing
+# Recuperação de falhas

@@ -194,13 +194,7 @@
         <script type="text/template">
           # Acessando uma app
 
-minha-app.minha-cloud.com
-    |
- router
-  /  \
- [.] [.] app minha-app
-
-- app em execução -> nodes rodando docker rodam units (containers); router fica na frente recebendo os requests, atuando como balanceador e distribuindo as requisições entre eles
+<img src="static/app-router.png" />
 
         </script>
       </section>
@@ -209,36 +203,156 @@ minha-app.minha-cloud.com
         <script type="text/template">
           # Deploy
 
-- api gera img e envia pro registry; scheduler escolhe nodes para rodar as units; nodes baixam a img gerada do registry e rodam novos containers
-- deploy sem downtime -> api consulta healthcheck e avisa router (novas units p/ adicionar, units velhas pra remover), depois remove units antigas. Em caso de erro em qualquer etapa, as novas units são removidas e o deploy cancelado; a app continua funcionando como antes
-<img isidio>
+        </script>
+      </section>
 
-api -> registry
- |
- |
-node1 \
-node2 |-> pools
-node3 /
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/app-deploy1.png" data-background-color="#fff" data-background-size="70%" -->
 
         </script>
       </section>
 
       <section data-markdown>
         <script type="text/template">
-          # Orquestrador
-
-- ao executar um deploy, as units são distribuídas em diferentes nós, para aumentar a resiliência
-- não existia kubernetes, foi criado docker-cluster
-- units distribuídas para minimizar os efeitos em caso de falha em um node (se possível, em nodes de diferentes zonas)
+          <!-- .slide: data-background-image="static/app-deploy2.png" data-background-color="#fff" data-background-size="70%" -->
 
         </script>
       </section>
 
       <section data-markdown>
         <script type="text/template">
-          # Healing/Recuperação de falhas
+          <!-- .slide: data-background-image="static/app-deploy3.png" data-background-color="#fff" data-background-size="70%" -->
 
-- se alguma unit para de responder, tsuru automaticamente cria uma nova unit, atualiza o roteamento e apaga a unit antiga
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/app-deploy4.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/app-deploy5.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Deploys com erro
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/app-deploy-fail1.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/app-deploy-fail2.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/app-deploy-fail3.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/app-deploy-fail4.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Scheduler
+
+- units de uma mesma app são distribuídas em diferentes nós/zonas, para aumentar a resiliência
+- github.com/tsuru/docker-cluster
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/scheduling1.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/scheduling2.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/scheduling3.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          # Healing
+# Recuperação de falhas
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/healing1.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/healing2.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/healing3.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/healing4.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/healing5.png" data-background-color="#fff" data-background-size="70%" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/healing6.png" data-background-color="#fff" data-background-size="70%" -->
 
         </script>
       </section>
