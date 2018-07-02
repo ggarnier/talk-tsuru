@@ -1,3 +1,1 @@
-# Acessando uma app
-
-<img src="static/app-router.png" />
+<!-- .slide: data-background-image="static/app-router.png" data-background-color="#fff" data-background-size="50%" -->
