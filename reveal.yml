@@ -41,7 +41,8 @@ slides:
 - node-healing3
 - node-healing4
 - node-healing5
-- metricas
+- bs1
+- bs2
 - autoscale
 - mais
 - handson
