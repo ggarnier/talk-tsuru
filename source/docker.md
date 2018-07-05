@@ -1,4 +1,4 @@
-# Docker
+<img src="static/docker.png" width="700px" />
 
 - 2013
 - baseado em linux containers

@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>A arquitetura do tsuru PaaS</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -92,9 +92,9 @@
         <script type="text/template">
           # 2012
 
-- time criado para avaliar soluções para evoluir este cenário (reduzir o tempo para colocar uma app em produção)
+- objetivo: reduzir o tempo para colocar uma app em produção
 - soluções encontradas não atendiam
-- decisão por criar uma ferramenta própria: surge o tsuru :)
+- decisão por criar uma plataforma: nasce o tsuru :)
 
 
         </script>
@@ -120,7 +120,7 @@
 
 - baseado no juju (canonical)
 - uma VM para cada unidade de processamento
-- deploy em alguns minutos
+- deploy em minutos
 - deploys modificam as VMs existentes
 
         </script>
@@ -128,7 +128,7 @@
 
       <section data-markdown>
         <script type="text/template">
-          # Docker
+          <img src="static/docker.png" width="700px" />
 
 - 2013
 - baseado em linux containers
@@ -154,6 +154,9 @@
 
 - baseado em Docker
 - 12 factor: boas práticas de desenvolvimento
+  - controle de versão
+  - dependências explícitas
+  - configurações separadas do código
 
         </script>
       </section>
@@ -304,8 +307,7 @@
 
       <section data-markdown>
         <script type="text/template">
-          # Healing
-# Recuperação de falhas
+          # Healing de units
 
         </script>
       </section>
@@ -441,6 +443,9 @@ Slides: https://blog.guilhermegarnier.com/talk-tsuru/
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				width: 1280,
+				height: 800,
+				controls: false,
 				history: true,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
