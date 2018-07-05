@@ -199,6 +199,54 @@
 
       <section data-markdown>
         <script type="text/template">
+          # Plataformas
+
+- imagens padrão para cada linguagem suportada
+- https://github.com/tsuru/platforms
+  - Python, Go, Ruby, NodeJS, Java, etc
+- seguem as boas práticas de cada linguagem
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          ```sh
+$ tsuru platform-list
+- elixir
+- go
+- java
+- nodejs
+- php
+- python
+- ruby
+- static
+
+$ tsuru app-create myapp python
+App "myapp" has been created!
+
+$ tsuru app-deploy -a myapp app.py Procfile requirements.txt
+```
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/platforms.png" data-background-color="#fff" data-background-size="90% auto" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
+          <!-- .slide: data-background-image="static/app-image.png" data-background-color="#fff" data-background-size="90% auto" -->
+
+        </script>
+      </section>
+
+      <section data-markdown>
+        <script type="text/template">
           # Deploy
 
         </script>
