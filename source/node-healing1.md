@@ -1,1 +1,0 @@
-# Healing de nós

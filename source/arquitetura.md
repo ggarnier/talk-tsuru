@@ -1,3 +1,0 @@
-# Arquitetura
-
-## Conceitos básicos

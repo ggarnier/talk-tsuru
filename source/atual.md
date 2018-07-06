@@ -1,1 +1,0 @@
-# Cenário atual
